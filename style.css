@@ -11,8 +11,10 @@ body {
 }
 
 #lunarLogo {
+    position: absolute;
     margin-left: 50%;
     transform: translate(-50%, 50%);
+    transition: 1s;
 }
 #LunarText {
     opacity: 0;
@@ -21,8 +23,8 @@ body {
     position: absolute;
     right: 50%;
     top: 650px;
-    transform: translate(50%, 50%);
-    font-size: 400%;
+    transform: translate(50%, 0%);
+    font-size: 500%;
 }
 #LunarText2 {
     opacity: 0;
@@ -39,6 +41,7 @@ body {
     position: absolute;
     width: 100%;
     top: 100%;
+    left: 0%;
     height: 200%;
     overflow: hidden;
     background: linear-gradient(rgb(0, 19, 48), rgb(10, 0, 19));
@@ -52,4 +55,32 @@ body {
     top: 0%;
     color: #fff;
     text-shadow: 0 0 5px #000;
+}
+
+@media only screen and (max-width: 1080px) {
+    #lunarLogo {
+        transform: translate(-50%, 0%);
+    }
+    #LunarText {
+        opacity: 0;
+        transition: 1s;
+        color: white;
+        position: absolute;
+        right: 50%;
+        top: 512px;
+        transform: translate(50%, -70%);
+        font-size: 400%;
+        font-size:10vw;
+    }
+    #LunarText2 {
+        opacity: 0;
+        transition: 1s;
+        color: white;
+        position: absolute;
+        right: 50%;
+        top: 512px;
+        transform: translate(50%, 50%);
+        font-size: 400%;
+        font-size:8vw;
+    }
 }
